@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI Symbol';
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 110px;
+    padding-right: 140px;
+    position: relative;
+    gap: 38px;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.logo{
+    flex-basis: 100px;
+}
+.logo img{
+    width: 100%;
+}
+#navbar div{
+    display: flex;
+}
+#searchbar{
+    background-image: url("https://www.licious.in/image/search_venus_icon.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 300px;
+    padding: 10px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 6px;
+    border: 1px solid rgb(228, 228, 228);
+}
+#banner{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#banner img{
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#menu{
+    width: 80%;
+    margin: auto;
+    cursor: pointer;
+}
+#menu>h2{
+    line-height: 1px;
+}
+#menu-child{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-between;
+    text-align: center;
+}
+#menu-child img{
+    width: 70%;
+}
+#product1{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    gap: 15px;
+}
+#container p{
+    line-height: 1px;
+}
+#container button{
+    display: block;
+    margin: auto;
+    background-color: white;
+    border: 1px solid rgb(216, 216, 216);
+    color: rgb(255, 0, 179);
+    padding: 6px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#container img{
+    width: 100%;
+    border-radius: 10px;
+}
+#review{
+    width: 100%;
+    background-color: rgb(255, 230, 234);
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#review>div{
+    width: 82%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin: auto;
+    gap: 30px;
+}
+#footer{
+    width: 100%;
+    background-color: rgb(46, 46, 46);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#footer div{
+    width: 70%;
+    color: white;
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+    line-height: 20px;
+}
+#footersocial>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+/* #footersocial>div>Div{
+    border: 1px solid red;
+} */
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+}
+#footersocial>div>div:nth-child(3){
+    line-height: 12px;
+}
+#footersocial>div>div:nth-child(3) img{
+    width: 60%;
+}
+#functionality{
+    width: 80%;
+    margin: auto;
+    color: red;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#functionality select{
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+@media all and (max-width:1200px){
+    #menu-child{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #searchbar{
+        width: 200px;
+    }
+}
+@media all and (max-width:969px){
+    #searchbar{
+        width: 100px;
+        font-size: small;
+    }
+    #navbar{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media all and (max-width:900px){
+    #container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #footersocial>div{
+        flex-direction: column;
+        align-items: center;
+    }
+    #footersocial>div>div{
+        width: 45%;
+    }
+}
+@media all and (max-width:770px){
+    #banner{
+        width: 90%;
+    }
+    #menu{
+        width: 90%;
+    }
+    #product1{
+        width: 90%;
+    }
+    #review>div{
+        width: 90%;
+    }
+    #footer div{
+        width: 90%;
+    }
+    #navbar{
+        height: 70px;
+    }
+    #navbar>div{
+        display: none;
+    }
+    #navbar>div:nth-child(2){
+        display: block;
+    }
+    #navbar>div:nth-child(3){
+        width: 200px;
+        display: block;
+    }
+    #container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (max-width:720px){
+    #review>div{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (max-width:500px){
+    #review>div{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #footersocial>div>div{
+        width: 80%;
+    }
+}
+@media all and (max-width:375px){
+    #container p{
+        line-height: 12px;
+    }
+}
