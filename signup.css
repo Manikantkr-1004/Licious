@@ -68,6 +68,11 @@ label {
     background-color: rgb(255, 211, 211);
     font-weight: bold;
 }
+#topbar{
+    margin: auto;
+    display: block;
+    width: 10%;
+}
 #footer{
     width: 100%;
     background-color: rgb(46, 46, 46);
@@ -90,6 +95,9 @@ label {
     form{
         width: 40%;
     }
+    #topbar{
+        width: 15%;
+    }
 }
 @media all and (max-width:770px){
     #navbar{
@@ -111,15 +119,24 @@ label {
     #footer div{
         width: 90%;
     }
+    #topbar{
+        width: 15%;
+    }
 }
 @media all and (max-width:600px){
     form{
         width: 60%;
+    }
+    #topbar{
+        width: 18%;
     }
 
 }
 @media all and (max-width:400px){
     form{
         width: 80%;
+    }
+    #topbar{
+        width: 20%;
     }
 }
