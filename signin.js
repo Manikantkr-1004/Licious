@@ -10,6 +10,11 @@ let signupdata= JSON.parse(localStorage.getItem("signupdata")) || [];
 
 submit.addEventListener("click", function(e){
     e.preventDefault();
+
+    if (email.value.trim() === "" || password.value.trim() === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
     
     if(available()){
         form.reset();
