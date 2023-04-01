@@ -10,11 +10,16 @@ let signupdata= JSON.parse(localStorage.getItem("signupdata")) || [];
 
 submit.addEventListener("click", function(e){
     e.preventDefault();
+
+    if (email.value.trim() === "" || password.value.trim() === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
     
     if(available()){
         form.reset();
-        alert("Login Successful😊");
         show.innerText = "Login Successful😊";
+        alert("Login Successful😊");
         setTimeout(() => {
             window.location.href = "./mainpage.html";
         }, 2000);
