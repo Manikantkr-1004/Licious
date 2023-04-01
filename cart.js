@@ -1,7 +1,7 @@
 let container = document.getElementById("container");
 let length = document.getElementById("length");
-let totalprice = document.getElementById("totalprice")
 let pay= document.getElementById("pay");
+let totalprice = document.getElementById("totalprice");
 let show= document.getElementById("show");
 let logout= document.getElementById("logout");
 
@@ -12,8 +12,8 @@ let paymentdata = JSON.parse(localStorage.getItem("paymentdata")) || [];
 logout.addEventListener("click", function(){
     alert("Logout Successful!!");
     setTimeout(() => {
-        window.location.href = "./homepage.html";
-    }, 2000);
+        window.location.href = "./index.html";
+    }, 1000);
 })
 
 length.innerText = cartdata.length;
@@ -53,12 +53,14 @@ function Display(data){
             Display(data);
 
             length.innerText = data.length;
+            updateTotalPrice();
         })
 
         increase.addEventListener("click", function(){
             element.quantity++;
             localStorage.setItem("cartdata", JSON.stringify(data));
             Display(data);
+            updateTotalPrice();
         })
 
         decrease.addEventListener("click", function(){
@@ -66,33 +68,41 @@ function Display(data){
                 element.quantity--;
                 localStorage.setItem("cartdata", JSON.stringify(data));
                 Display(data);
+                updateTotalPrice();
             }
         })
 
-        totalprice.innerText = calculate(data);
-
-        function calculate(data){
-
-            let sum=0;
-            for(let i=0; i<cartdata.length; i++){
-                sum+= cartdata[i].quantity*cartdata[i].price;
-            }
-            return sum;
-        }
 
         box.append(images, names, weights, prices, increase, quantity, decrease,deliveries, remove);
         container.append(box);
 
         pay.addEventListener("click", function(){
+            if(cartdata.length===0){
 
-            show.innerHTML = '<img style="width:13%;" src="https://gifdb.com/images/high/animated-transparent-background-check-mark-lb1gygckicpca0fb.gif">';
-            paymentdata.push({...element, totalcost: totalprice.innerText});
-            localStorage.setItem("paymentdata", JSON.stringify(paymentdata));
-            setTimeout(() => {
-                window.location.href = "./payment.html"
-            }, 2000);
+            }else{
+
+                show.innerHTML = '<img style="width:13%;" src="https://gifdb.com/images/high/animated-transparent-background-check-mark-lb1gygckicpca0fb.gif">';
+                paymentdata.push({...element, totalcost: totalprice.innerText});
+                localStorage.setItem("paymentdata", JSON.stringify(paymentdata));
+                setTimeout(() => {
+                    window.location.href = "./payment.html"
+                }, 2000);
+            }
         })
-
 
     });
 }
+
+function updateTotalPrice() {
+    let sum=0;
+    for(let i=0; i<cartdata.length; i++){
+        sum+= cartdata[i].quantity*cartdata[i].price;
+    }
+    totalprice.innerText = sum;
+    
+    if (cartdata.length === 0) {
+        totalprice.innerText = 0;
+    }
+}
+
+updateTotalPrice();
