@@ -18,8 +18,8 @@ submit.addEventListener("click", function(e){
     
     if(available()){
         form.reset();
-        alert("Login Successful😊");
         show.innerText = "Login Successful😊";
+        alert("Login Successful😊");
         setTimeout(() => {
             window.location.href = "./mainpage.html";
         }, 2000);

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.licious.in/image/licious_favicon.ico"/>
+    <title>Licious - Payment</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+</head>
+<body>
+    <div id="navbar">
+        <div class="logo"><img src="https://www.licious.in/image/rebranding/svg/licious-logo.svg" alt=""></div>
+        <div class="address">
+            <img src="https://www.licious.in/image/rebranding/svg/location-pin.svg" alt="">
+            <p>Delhi, India</p>
+        </div>
+        <div class="login">
+            <img src="https://www.licious.in/image/rebranding/svg/profile-grey.svg" alt="">
+            <a id="logout" style="color: black; text-decoration: none;" >Logout</a>
+        </div>
+        <div class="homepage">
+            <img src="https://www.freeiconspng.com/thumbs/homepage-icon-png/home-page-icon-0.png" alt="">
+            <a style="color: black; text-decoration: none;" href="./mainpage.html">Home</a>
+        </div>
+    </div>
+    <img id="topbar" src="https://gifs.eco.br/wp-content/uploads/2022/09/gifs-de-delivery-5.gif" alt="">
+    <form>
+        <h1 style="text-align: center; letter-spacing: 2px;">Delivery Details</h1>
+        <h3>Total Cart Price is ₹<span id="price">0</span></h3>
+        <label for="name">Full Name</label><br />
+        <input type="text" id="name" placeholder="Please Enter Your Full Name" required><br /><br />
+        <label for="address">Current Address</label><br />
+        <input type="text" id="address" placeholder="Please Enter Your Current Address" required><br /><br />
+        <label for="mobile">Active Mobile No.</label><br />
+        <input type="tel" id="mobile" placeholder="Please Enter Your Mobile No." required><br /><br />
+        <label for="paymethod">Payment Method</label><br />
+        <select id="paymethod">
+            <option value="">Select Anyone</option>
+            <option value="cash">Cash on Delivery</option>
+            <option value="upi">UPI</option>
+            <option value="net">Net Banking</option>
+            <option value="wallet">Wallet</option>
+        </select><br /><br />
+        <input type="number" id="otpsubmit" placeholder="Put here OTP"><button id="finsubmit">Submit</button>
+        <div id="showimg"></div>
+        <button id="submit">Generate OTP</button>
+      </form>      
+    <p style="text-align: center;">Please fill the form to confirm Order😊</p>
+    <br><br><br>
+    <div id="footer">
+        <div>
+            <p>© 2021 Delightful Gourmet Pvt Ltd. All Rights Reserved.</p>
+            <p>Licious is your one-stop fresh meat delivery shop. In here, you get nothing but the freshest meat & seafood, delivered straight to your doorstep. Now you can buy meat online anytime at your convenience. Indulge in our diverse selection: Chicken, Mutton, Seafood (Fish, Prawns, Crabs), Marinades & Cold Cuts. All our products are completely natural and healthy. Once you've experienced Licious, you'll never go back to the old way of buying meat and seafood.</p>
+        </div>
+    </div>
+</body>
+<script src="./script/payment.js"></script>
+</html>

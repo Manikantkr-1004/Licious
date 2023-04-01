@@ -12,8 +12,8 @@ let paymentdata = JSON.parse(localStorage.getItem("paymentdata")) || [];
 logout.addEventListener("click", function(){
     alert("Logout Successful!!");
     setTimeout(() => {
-        window.location.href = "./homepage.html";
-    }, 2000);
+        window.location.href = "./index.html";
+    }, 1000);
 })
 
 length.innerText = cartdata.length;
