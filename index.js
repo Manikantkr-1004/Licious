@@ -110,19 +110,6 @@ const product1 = [
 let container= document.getElementById("container")
 let filter=  document.getElementById("filter");
 let search = document.getElementById("searchbar");
-let logout= document.getElementById("logout");
-let length=  document.getElementById("length");
-let showname=  document.getElementById("nameshow");
-
-let cartdata= JSON.parse(localStorage.getItem("cartdata")) || [];
-let signupdata= JSON.parse(localStorage.getItem("signupdata")) || [];
-
-logout.addEventListener("click", function(){
-    alert("Logout Successful!!");
-    setTimeout(() => {
-        window.location.href = "./index.html";
-    }, 1000);
-})
 
 filter.addEventListener("change", function(){
     if(filter.value===""){
@@ -155,12 +142,7 @@ search.addEventListener("input",function(){
     Display(filtered);
 })
 
-for(let i=0; i<signupdata.length; i++){
-    showname.innerText= signupdata[i].Name+"😊😊";
-    showname.style.color= "blue";
-}
 
-length.innerText = cartdata.length;
 
 Display(product1);
 
@@ -183,26 +165,10 @@ function Display(data){
         cart.innerText = "+ Add To Cart"
 
         cart.addEventListener("click",function(){
-            if(available(data[i])){
-                alert("Product already in Cart, Add other products");
-            }else{
-                alert("Product added in Cart😊");
-                cartdata.push({...data[i], quantity:1});
-                localStorage.setItem("cartdata", JSON.stringify(cartdata));
-                length.innerText = cartdata.length;
-            }
+            alert("First Login in Website")
         })
 
         box.append(images, cart, names, weights, prices, deliveries);
         container.append(box);
     }
     };
-
-    function available(element){
-        for(let i=0; i<cartdata.length; i++){
-            if(cartdata[i].id===element.id){
-                return true;
-            }
-        }
-        return false;
-    }
