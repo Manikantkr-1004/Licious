@@ -125,11 +125,13 @@ body{
     #navbar>div{
         display: none;
     }
-    #navbar>div:nth-child(2){
+    #navbar>div:nth-child(2),
+    #navbar>div:nth-child(4),
+    #navbar>div:nth-child(5){
         display: block;
     }
     #navbar>div:nth-child(3){
-        width: 200px;
+        width: 50px;
         display: block;
     }
     #footer div{

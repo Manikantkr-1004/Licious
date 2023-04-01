@@ -222,6 +222,12 @@ body{
         width: 200px;
         display: block;
     }
+    #navbar>div:nth-child(5){
+        display: block;
+    }
+    #navbar>div:nth-child(6){
+        display: block;
+    }
     #container{
         grid-template-columns: repeat(2, 1fr);
     }
