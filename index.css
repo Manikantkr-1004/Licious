@@ -40,6 +40,7 @@ body{
     border-radius: 6px;
     border: 1px solid rgb(228, 228, 228);
 }
+
 #banner{
     width: 80%;
     margin: auto;
@@ -222,6 +223,9 @@ body{
         width: 200px;
         display: block;
     }
+    #navbar>div:nth-child(5){
+        display: block;
+    }
     #container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -241,6 +245,6 @@ body{
 }
 @media all and (max-width:375px){
     #container p{
-        line-height: 12px;
+        line-height: 15px;
     }
 }
