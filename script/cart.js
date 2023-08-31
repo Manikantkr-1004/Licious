@@ -4,13 +4,18 @@ let pay= document.getElementById("pay");
 let totalprice = document.getElementById("totalprice");
 let show= document.getElementById("show");
 let logout= document.getElementById("logout");
+let logo = document.getElementsByClassName("logo");
 
+logo[0].addEventListener("click",function(){
+    window.location.href = "./mainpage.html"
+})
 
 let cartdata= JSON.parse(localStorage.getItem("cartdata")) || [];
 let paymentdata = JSON.parse(localStorage.getItem("paymentdata")) || [];
 
 logout.addEventListener("click", function(){
     alert("Logout Successful!!");
+    localStorage.removeItem("licious_login_name")
     setTimeout(() => {
         window.location.href = "./index.html";
     }, 1000);

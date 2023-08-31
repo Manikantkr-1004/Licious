@@ -4,6 +4,12 @@ let password= document.getElementById("password");
 let submit= document.getElementById("submit");
 let form=  document.querySelector("form");
 let show= document.getElementById("text");
+let logo = document.getElementsByClassName("logo");
+
+logo[0].addEventListener("click",function(){
+    window.location.href = "./index.html"
+})
+
 
 let signupdata= JSON.parse(localStorage.getItem("signupdata")) || [];
 

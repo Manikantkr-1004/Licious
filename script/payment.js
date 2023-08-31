@@ -6,9 +6,15 @@ let showimg = document.getElementById("showimg");
 let logout= document.getElementById("logout");
 let otpinput= document.getElementById("otpsubmit");
 let otpsubmit= document.getElementById("finsubmit");
+let logo = document.getElementsByClassName("logo");
+
+logo[0].addEventListener("click",function(){
+    window.location.href = "./mainpage.html"
+})
 
 logout.addEventListener("click", function(){
     alert("Logout Successful!!");
+    localStorage.removeItem("licious_login_name")
     setTimeout(() => {
         window.location.href = "./index.html";
     }, 1000);

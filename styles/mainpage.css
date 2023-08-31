@@ -15,7 +15,10 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-left: 110px;
     padding-right: 140px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
     gap: 38px;
     margin: auto;
     cursor: pointer;

@@ -16,8 +16,10 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding-left: 110px;
     padding-right: 140px;
-    /* position: relative;
-    gap: 38px; */
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
     margin: auto;
     cursor: pointer;
     margin-bottom: 10px;
@@ -34,7 +36,7 @@ body{
 #product1{
     width: 80%;
     margin: auto;
-    margin-top: 30px;
+    margin-top:100px;
 }
 #container{
     display: grid;
